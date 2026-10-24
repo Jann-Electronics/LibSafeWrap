@@ -1,6 +1,37 @@
 {
   "name": "LibSafeWrap",
   "version": "1.0.0",
+  "description": "Thread-safe access to structs, arrays and objects shared between FreeRTOS tasks on ESP32, with explicit lock timeouts and RAII mutex release. Header-only.",
+  "keywords": "freertos, mutex, thread-safe, rtos, concurrency, esp32, header-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jann-Electronics/LibSafeWrap.git"
+  },
+  "authors": [
+    {
+      "name": "JojeNN97",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://jannelectronics.com",
   "frameworks": ["arduino", "espidf"],
-  "platforms": "espressif32"
+  "platforms": "espressif32",
+  "headers": "SafeWrap.h",
+  "examples": [
+    {
+      "name": "Base",
+      "base": "examples/base",
+      "files": ["base.cpp"]
+    },
+    {
+      "name": "Error handling",
+      "base": "examples/error",
+      "files": ["error.cpp"]
+    }
+  ],
+  "export": {
+    "exclude": [".pio", ".vscode"]
+  },
+  "dependencies": []
 }
